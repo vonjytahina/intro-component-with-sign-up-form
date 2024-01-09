@@ -1,0 +1,235 @@
+/* import font family*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/* colors */
+:root {
+  --primary-soft-blue: hsl(231, 69%, 60%);
+  --primary-soft-red: hsl(0, 94%, 66%);
+
+  --neutral-grayish-blue: hsl(229, 8%, 60%);
+  --neutral-very-dark-blue: hsl(229, 31%, 21%);
+}
+
+/* global style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+/* container */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 800px;
+  margin: 0 auto;
+  background: url('images/bg-intro-desktop.png'), #ff7978;
+  border: 1px solid transparent;
+}
+
+.container .app {
+  width: 1110px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 120px auto 0px;
+}
+
+.container .app .left {
+  width: 500px;
+  height: auto;
+}
+
+.container .app .left h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 54px;
+  margin-bottom: 30px;
+}
+
+.container .app .left p {
+  color: #ddd;
+}
+
+.container .app .right {
+  width: 540px;
+  height: auto;
+}
+
+.container .app .right .right-top {
+  width: 100%;
+  background: var(--primary-soft-blue);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 25px;
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.container .app .right .right-top span {
+  font-weight: 600;
+}
+
+.container .app .right form {
+  background: white;
+  width: 100%;
+  height: auto;
+  padding: 35px 40px 35px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.container .app .right form .field {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.container .app .right form .field .input-container {
+  width: 100%;
+  height: 55px;
+  position: relative;
+}
+
+.container .app .right form .field .input-container input {
+  width: 100%;
+  height: 55px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #dedede;
+  transition: border .3s ease-in-out;
+  padding-left: 30px;
+  font-weight: 600;
+  color: #343339;
+  caret-color: #6053a2;
+  font-size: 14px;
+}
+
+.container .app .right form .field .input-container input:focus {
+  border: 1px solid #6053a2;
+}
+
+.container .app .right form .field .input-container .error-icon {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.container .app .right form .field .error-message {
+  text-align: right;
+  font-size: 10px;
+  font-style: italic;
+  color: var(--primary-soft-red);
+  margin-top: 5px;
+  display: none;
+}
+
+.container .app .right form .submit {
+  width: 100%;
+  height: 55px;
+  background: #37cc8a;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  border: none;
+  outline: none;
+  display: block;
+  cursor: pointer;
+  box-shadow: 0px 5px 0px 0px #5da688;
+  transition: all .3s ease-in-out;
+}
+
+.container .app .right form .submit:hover {
+  background: #77e2b4;
+  box-shadow: 0px 5px 0px 0px #6dcca2;
+}
+
+.container .app .right form p.text-bottom {
+  text-align: center;
+  font-size: 12px;
+  color: #bab8c6;
+}
+
+.container .app .right form p.text-bottom span {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-soft-red);
+}
+
+
+
+
+
+
+.attribution {
+  margin: 20px auto;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  font-size: 11px;
+  color: hsl(228, 45%, 44%);
+}
+
+/* responsive */
+@media screen and (max-width: 1150px) {
+  .container .app {
+    width: 100%;
+    flex-direction: column;
+    gap: 65px;
+    padding-bottom: 120px;
+  }
+
+  .container .app .left {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .container .app {
+    margin: 100px auto 0px;
+    padding-bottom: 65px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .container .app .left {
+    width: 100%;
+  }
+
+  .container .app .left h1 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .container .app .right {
+    width: 100%;
+  }
+
+  .container .app .right .right-top {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .container .app .right form {
+    padding: 20px;
+  }
+
+}
